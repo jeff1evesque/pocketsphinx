@@ -29,7 +29,7 @@ sudo apt-get install swig2.0
 
 ###Configuration
 
-####GIT
+####GIT:
 
 Fork this project on your GitHub account, then clone it:
 
@@ -53,7 +53,9 @@ git submodule init
 git submodule update
 ```
 
-Then, change file permissions:
+####File Permission:
+
+Change the file permission for the entire project by issuing the command:
 
 ```
 cd /var/www
@@ -62,7 +64,7 @@ sudo chown -R jeffrey:admin pocketsphinx-custom
 
 **Note:** change *jeffrey* to YOUR username.
 
-###Installation / Updating:
+###Installation, and Updates:
 
 SphinxBase is a dependency for *PocketSphinx*.  Therefore, we need to incorporate both submodules.
 
