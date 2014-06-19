@@ -35,20 +35,20 @@ Fork this project on your GitHub account, then clone it:
 
 ```
 cd /var/www
-sudo git clone https://jeff1evesque@github.com/[YOUR-USERSNAME]/pocketsphinx-custom.git pocketsphinx-custom
+sudo git clone https://jeff1evesque@github.com/[YOUR-USERSNAME]/pocketsphinx.git pocketsphinx-custom
 ```
 
 Then, add git upstream reference:
 
 ```
 cd /var/www/pocketsphinx-custom
-git remote add upstream https://github.com/jeff1evesque/pocketsphinx-custom.git
+git remote add upstream https://github.com/jeff1evesque/pocketsphinx.git
 ```
 
 Initialize any submodules we are using:
 
 ```
-cd /var/www/pocketsphinx-custom
+cd /var/www/pocketsphinx
 git submodule init
 git submodule update
 ```
@@ -73,7 +73,7 @@ SphinxBase is a dependency for *PocketSphinx*.  Therefore, we need to incorporat
 ####SphinxBase:
 
 ```
-cd /var/www/pocketsphinx-custom/sphinxbase
+cd /var/www/pocketsphinx/sphinxbase
 git checkout -b [NEW_BRANCH] MASTER
 git add [FILE]
 git commit -m "#i: MESSAGE"
