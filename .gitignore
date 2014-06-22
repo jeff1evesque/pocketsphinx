@@ -1,0 +1,5 @@
+# Ignore and don't commit the following directories
+sphinxbase/
+pocketsphinx/
+
+# Ignore and don't commit the followig files
