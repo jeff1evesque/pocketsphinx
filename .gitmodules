@@ -4,3 +4,6 @@
 [submodule "pocketsphinx"]
 	path = pocketsphinx
 	url = git://github.com/cmusphinx/pocketsphinx.git
+[submodule "sphinxtrain"]
+	path = sphinxtrain
+	url = git://github.com/cmusphinx/sphinxtrain.git
