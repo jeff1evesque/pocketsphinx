@@ -5,7 +5,7 @@ This repository contains all the prerequisites properly configured in order to u
 
 For questions regarding this project, or implementations of it on other projects, feel free to reach out:
 
-*Jeffrey Levesque*  
+Jeffrey Levesque  
 jeff1evesque@yahoo.com
 
 ##PocketSphinx
