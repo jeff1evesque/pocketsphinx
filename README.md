@@ -158,3 +158,11 @@ The resulting text translation will look like the following, whether redirected 
 000000001: the program processes audio by splitting on the audio into chunks
 000000002: the chunks are determined by silence fragments within the audio input file
 ```
+
+###Translation Time (TR)
+
+The trasnlation time (TR) suggested by a CMUSphinx developer, should be three times the recording time (RT):
+
+```
+TR = 3xRT
+```
