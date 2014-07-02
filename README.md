@@ -166,3 +166,7 @@ The trasnlation time (TR) suggested by a CMUSphinx developer, should be three ti
 ```
 TR = 3xRT
 ```
+
+###Translation Accuracy
+
+Depending on whether additional *Acoustic*, or *Lanuguage* models are used, the translation accuracy can be significantly influenced.  One thing to keep in mind, the *Sphinx* engine has difficulty translating *language fillers*, words generally used to express pauses (uh, hmm, err, ahh, etc.) within speech.  Language fillers, at times may be ignored, or translated into some other known word.
