@@ -169,4 +169,7 @@ TR = 3xRT
 
 ###Translation Accuracy
 
-Depending on whether additional *Acoustic*, or *Lanuguage* models are used, the translation accuracy can be significantly influenced.  One thing to keep in mind, the *Sphinx* engine has difficulty translating *language fillers*, words generally used to express pauses (uh, hmm, err, ahh, etc.) within speech.  Language fillers, at times may be ignored, or translated into some other known word.
+Depending on whether additional *Acoustic*, or *Lanuguage* models are used, the translation accuracy can be significantly influenced.  Generally, the *Acoustic model* describes the sounds of the language, whereas the *Language model* describes the probability of word sequences.  In order to create our own acoustic model, we need to utilize the *SphinxTrain* submodule in this repository.  To create our own language model, we need to use *srilm*, a non-free licensed tool.
+
+
+One thing to keep in mind, the *Sphinx* engine has difficulty translating *language fillers*, words generally used to express pauses (uh, hmm, err, ahh, etc.) within speech.  Language fillers, at times may be ignored, or translated into some other known word.
