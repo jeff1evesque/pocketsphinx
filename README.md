@@ -1,7 +1,9 @@
 PocketSphinx
 =====================
 
-This repository contains all the prerequisites properly configured in order to use PocketSphinx.  We have installed both *SphinxBase*, as well as *PocketSphinx* as suggested.  This repository can be forked, then used as a submodule.
+This repository contains all the prerequisites properly configured in order to use PocketSphinx.  We have installed both *SphinxBase*, as well as *PocketSphinx* as suggested.  This repository can be forked (or directly submoduled), then used as a submodule.
+
+For questions regarding this project, or implementations on other projects, feel free to send an email to jeff1evesque@yahoo.com
 
 ##PocketSphinx
 
