@@ -116,13 +116,13 @@ To improve the accuracy of audio translations, we will utilize two additional mo
 
 - http://sourceforge.net/projects/cmusphinx/files/Acoustic%20and%20Language%20Models/US%20English%20Generic%20Language%20Model/
 
-We need to ensure `en-us` is stored in the following directory:
+Then, we need to ensure `en-us` is stored in the following directory:
 
 ```
 /usr/local/share/pocketsphinx/model/hmm/en-us
 ```
 
-And, ensure that `cmusphinx-5.0-en-us.lm.dmp` (extracted *language model*) is stored in the following directory:
+and, `cmusphinx-5.0-en-us.lm.dmp` (extracted *language model*) is stored in the following directory:
 
 ```
 /usr/local/share/pocketsphinx/model/lm/cmusphinx-5.0-en-us.lm.dmp
