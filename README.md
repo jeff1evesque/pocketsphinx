@@ -108,6 +108,26 @@ Then, submit a pull-request, and merge the above changes.
 
 Repeat the latter steps tailored for the PocketSphinx submodule.
 
+####Additional PocketSphinx Models
+
+To improve the accuracy of audio translations, we will utilize two additional models.  An *Acoustic*, and *Language* model.  These can be downloaded from the following sources, respectively:
+
+- http://sourceforge.net/projects/cmusphinx/files/Acoustic%20and%20Language%20Models/US%20English%20Generic%20Acoustic%20Model/
+
+- http://sourceforge.net/projects/cmusphinx/files/Acoustic%20and%20Language%20Models/US%20English%20Generic%20Language%20Model/
+
+Then, we need to ensure `en-us` is stored in the following directory:
+
+```
+/usr/local/share/pocketsphinx/model/hmm/en-us
+```
+
+and, `cmusphinx-5.0-en-us.lm.dmp` (extracted *language model*) is stored in the following directory:
+
+```
+/usr/local/share/pocketsphinx/model/lm/cmusphinx-5.0-en-us.lm.dmp
+```
+
 ##Testing / Execution
 
 When everything has been installed, and configured, *PocketSphinx* is very easy to run.  For example, we can run the following commands:
