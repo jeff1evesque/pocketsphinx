@@ -107,3 +107,34 @@ Then, submit a pull-request, and merge the above changes.
 ####PocketSphinx:
 
 Repeat the latter steps tailored for the PocketSphinx submodule.
+
+##Testing / Execution
+
+When everything has been installed, and configured, *PocketSphinx* is very easy to run.  For example, we can run the following commands:
+
+```
+# converts SAMPLE.wav to text within the terminal console
+pocketsphinx_continuous -infile SAMPLE.wav
+
+# converts SAMPLE.wav to text while using additional Acoustic, and Language models respectively
+pocketsphinx_continuous -infile SAMPLE.wav -hmm en-us -lm en-us.lm.dmp
+
+# converts SAMPLE.wav, and redirects output to sample.txt
+pocketsphinx_continuous -infile SAMPLE.wav > sample.txt
+```
+
+###Flags
+
+`hmm en-us`: loads *Acoustic model* from the `en-us` folder
+
+`lm en-us.lm.dmp`: loads *Language model* from the file `en-us.lm.dmp`
+
+###Output
+
+The resulting text translation will look like the following, whether redirected to a text file, or stdout within the terminal console:
+
+```
+000000000: this is a test conversion result using this applcation
+000000001: the program processes audio by splitting on the audio into chunks
+000000002: the chunks are determined by silence fragments within the audio input file
+```
