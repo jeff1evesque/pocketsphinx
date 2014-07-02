@@ -91,9 +91,10 @@ SphinxBase is a dependency for *PocketSphinx*.  Therefore, we need to incorporat
 
 ```
 cd /var/www/pocketsphinx/sphinxbase
-git checkout -b [NEW_BRANCH] MASTER
-git add [FILE]
-git commit -m "#i: MESSAGE"
+git checkout master
+git pull
+./autogen.sh
+sudo make install
 
 cd ..
 git add sphinxbase
@@ -105,4 +106,4 @@ Then, submit a pull-request, and merge the above changes.
 
 ####PocketSphinx:
 
-Repeat the latter steps tailored for PocketSphinx submodule.
+Repeat the latter steps tailored for the PocketSphinx submodule.
