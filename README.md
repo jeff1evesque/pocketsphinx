@@ -35,13 +35,13 @@ Fork this project on your GitHub account, then clone it:
 
 ```
 cd /var/www
-sudo git clone https://jeff1evesque@github.com/[YOUR-USERSNAME]/pocketsphinx.git pocketsphinx-custom
+sudo git clone https://jeff1evesque@github.com/[YOUR-USERSNAME]/pocketsphinx.git pocketsphinx
 ```
 
 Then, add git upstream reference:
 
 ```
-cd /var/www/pocketsphinx-custom
+cd /var/www/pocketsphinx
 git remote add upstream https://github.com/jeff1evesque/pocketsphinx.git
 ```
 
@@ -59,7 +59,7 @@ Change the file permission for the entire project by issuing the command:
 
 ```
 cd /var/www
-sudo chown -R jeffrey:admin pocketsphinx-custom
+sudo chown -R jeffrey:admin pocketsphinx
 ```
 
 **Note:** change *jeffrey* to YOUR username.
@@ -105,4 +105,4 @@ Then, submit a pull-request, and merge the above changes.
 
 ####PocketSphinx:
 
-Repeat the latter steps tailored for PocetSphinx.
+Repeat the latter steps tailored for PocketSphinx submodule.
