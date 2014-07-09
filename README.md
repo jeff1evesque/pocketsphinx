@@ -113,6 +113,10 @@ Then, submit a pull-request, and merge the above changes.
 
 Repeat the latter steps tailored for the PocketSphinx submodule.
 
+####SphinxTrain:
+
+Repeat the latter steps tailored for the SphinxTrain submodule.
+
 ####Additional PocketSphinx Models
 
 To improve the accuracy of audio translations, we will utilize two additional models.  An *Acoustic*, and *Language* model.  These can be downloaded from the following sources, respectively:
