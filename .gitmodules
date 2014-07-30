@@ -1,9 +1,12 @@
 [submodule "sphinxbase"]
 	path = sphinxbase
 	url = git://github.com/cmusphinx/sphinxbase.git
+        ignore = dirty
 [submodule "pocketsphinx"]
 	path = pocketsphinx
 	url = git://github.com/cmusphinx/pocketsphinx.git
+        ignore = dirty
 [submodule "sphinxtrain"]
 	path = sphinxtrain
 	url = git://github.com/cmusphinx/sphinxtrain.git
+        ignore = dirty
