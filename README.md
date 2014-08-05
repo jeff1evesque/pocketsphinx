@@ -10,9 +10,7 @@ jeff1evesque@yahoo.com
 
 ###Definition
 
-PocketSphinx is a lightweight speech recognition engine, specifically tuned for handheld and mobile devices, though it works equally well on the desktop.
-
-- https://github.com/cmusphinx/pocketsphinx
+[PocketSphinx](https://github.com/cmusphinx/pocketsphinx) is a lightweight speech recognition engine, specifically tuned for handheld and mobile devices, though it works equally well on the desktop.
 
 ###Overview
 
