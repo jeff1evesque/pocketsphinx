@@ -152,12 +152,30 @@ The resulting text translation will look like the following, whether redirected 
 000000002: the chunks are determined by silence fragments within the audio input file
 ```
 
-###Translation Time (TR)
+###Translation Time
 
-The trasnlation time (TR) suggested by a CMUSphinx developer, should be three times the recording time (RT):
+The [PocketSphinx](http://cmusphinx.sourceforge.net/wiki/tutorialpocketsphinx) translation engine ideally should have a *translation time* **(TR)** equal to three times the *recording time* **(RT)**:
 
 ```
-TR = 3xRT
+TR = 3 x RT
+```
+
+The *translation time* (TR) can be verified by checking the output from the command `pocketsphinx_continuous`.  This command will output many lines.  However, the ones of particular relevance have a very specific form.
+
+###CPU Time
+
+The *CPU Time* is the actual *execution time* for the `pocketsphinx_continuous` command.  Therefore, the sum of all such lines will produce the overall CPU Time for the `pocketsphinx_continuous` command:
+
+```
+ngram_search_fwdtree.c(xxx): TOTAL fwdxxxx xx.xx CPU x.xxx xRTINFO:
+``` 
+
+###System Time
+
+The *Wall Time* is the actual *system time* for the `pocketsphinx_continuous` command.  A system can pause processes for various operations, including those used in relation to `pocketsphinx_continuous`.  Therefore, possibly a better measure of the overall translation time.  The sum of all such lines will produce the overall *System Time* for the `pocketsphinx_continuous` command:
+
+```
+ngram_search_fwdtree.c(xxx): TOTAL fwdtxxxx xx.xx wall x.xxx
 ```
 
 ###Translation Accuracy
