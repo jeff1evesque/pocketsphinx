@@ -152,12 +152,12 @@ The resulting text translation will look like the following, whether redirected 
 000000002: the chunks are determined by silence fragments within the audio input file
 ```
 
-###Translation Time (TR)
+###Translation Time
 
-The trasnlation time (TR) suggested by a CMUSphinx developer, should be three times the recording time (RT):
+The [PocketSphinx](http://cmusphinx.sourceforge.net/wiki/tutorialpocketsphinx) translation engine ideally should have a *translation time* **(TR)** equal to three times the *recording time* **(RT)**:
 
 ```
-TR = 3xRT
+TR = 3 x RT
 ```
 
 ###Translation Accuracy
