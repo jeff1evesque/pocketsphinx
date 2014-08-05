@@ -101,24 +101,19 @@ Repeat the latter steps tailored for the PocketSphinx submodule.
 
 Repeat the latter steps tailored for the SphinxTrain submodule.
 
-###Additional PocketSphinx Models
+###Acousting / Language Models
 
-To improve the accuracy of audio translations, we will utilize two additional models.  An *Acoustic*, and *Language* model.  These can be downloaded from the following sources, respectively:
-
-- http://sourceforge.net/projects/cmusphinx/files/Acoustic%20and%20Language%20Models/US%20English%20Generic%20Acoustic%20Model/
-
-- http://sourceforge.net/projects/cmusphinx/files/Acoustic%20and%20Language%20Models/US%20English%20Generic%20Language%20Model/
-
-Then, we need to ensure `en-us` is stored in the following directory:
+To improve the accuracy of audio translations, we will utilize two additional models.  An *Acoustic*, and *Language* model:
 
 ```
-/usr/local/share/pocketsphinx/model/hmm/
-```
+# Extract Acoustic, and Language Models
+cd ../../
+wget http://sourceforge.net/projects/cmusphinx/files/Acoustic%20and%20Language%20Models/US%20English%20Generic%20Acoustic%20Model/en-us.tar.gz/download -O en-us.tar.gz
+sudo tar -zxvf en-us.tar.gz -C /usr/local/share/pocketsphinx/model/hmm/
+sudo rm en-us.tar.gz
 
-and, `cmusphinx-5.0-en-us.lm.dmp` (extracted *language model*) is stored in the following directory:
-
-```
-/usr/local/share/pocketsphinx/model/lm/
+wget http://sourceforge.net/projects/cmusphinx/files/Acoustic%20and%20Language%20Models/US%20English%20Generic%20Language%20Model/cmusphinx-5.0-en-us.lm.dmp/download -O cmusphinx-5.0-en-us.lm.dmp
+sudo mv cmusphinx-5.0-en-us.lm.dmp /usr/local/share/pocketsphinx/model/lm/
 ```
 
 ##Testing / Execution
