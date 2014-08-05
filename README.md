@@ -12,10 +12,6 @@ jeff1evesque@yahoo.com
 
 [PocketSphinx](https://github.com/cmusphinx/pocketsphinx) is a lightweight speech recognition engine, specifically tuned for handheld and mobile devices, though it works equally well on the desktop.
 
-###Overview
-
-Though, this can be forked to any project - we are specifically going to use it as a submodule in our other project - https://github.com/jeff1evesque/audio-analyzer
-
 ##Pre-Installation
 
 ###Linux Packages
