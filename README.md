@@ -20,13 +20,18 @@ Though, this can be forked to any project - we are specifically going to use it 
 
 ##Pre-Installation
 
+###Linux Packages
+
 ```
+# General Packages:
 sudo apt-get update
 sudo apt-get install libtool
 sudo apt-get install autoconf
 sudo apt-get install bison
 sudo apt-get install swig2.0
 ```
+
+**Note:** This project assumes [Ubuntu Server 14.04](http://www.ubuntu.com/download/server) as the operating system.
 
 ##Configuration
 
