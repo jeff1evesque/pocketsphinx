@@ -101,7 +101,7 @@ Repeat the latter steps tailored for the PocketSphinx submodule.
 
 Repeat the latter steps tailored for the SphinxTrain submodule.
 
-###Acousting / Language Models
+###Acoustic / Language Models
 
 To improve the accuracy of audio translations, we will utilize two additional models.  An *Acoustic*, and *Language* model:
 
