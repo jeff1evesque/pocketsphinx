@@ -35,21 +35,21 @@ sudo apt-get install swig2.0
 Fork this project on your GitHub account, then clone it:
 
 ```
-cd /var/www/
+cd /var/www/html/
 sudo git clone https://jeff1evesque@github.com/[YOUR-USERSNAME]/pocketsphinx.git pocketsphinx
 ```
 
 Then, add git upstream reference:
 
 ```
-cd /var/www/pocketsphinx/
+cd /var/www/html/pocketsphinx/
 git remote add upstream https://github.com/jeff1evesque/pocketsphinx.git
 ```
 
 Initialize any submodules we are using:
 
 ```
-cd /var/www/pocketsphinx/
+cd /var/www/html/pocketsphinx/
 git submodule init
 git submodule update
 ```
@@ -59,7 +59,7 @@ git submodule update
 Change the file permission for the entire project by issuing the command:
 
 ```
-cd /var/www/
+cd /var/www/html/
 sudo chown -R jeffrey:admin pocketsphinx
 ```
 
@@ -70,7 +70,7 @@ sudo chown -R jeffrey:admin pocketsphinx
 We do not want to commit files, or directories within our git *submodules*.  For this reason, we need to add git *local ignore rules*.  This is done by changing into the directory of the submodule and editing the following file:
 
 ```
-cd /var/www/pocketsphinx/[YOUR_SUBMODULE]/
+cd /var/www/html/pocketsphinx/[YOUR_SUBMODULE]/
 pico .git/info/exclude
 ```
 
@@ -91,7 +91,7 @@ SphinxBase is a dependency for *PocketSphinx*.  Therefore, we need to incorporat
 ###SphinxBase
 
 ```
-cd /var/www/pocketsphinx/sphinxbase/
+cd /var/www/html/pocketsphinx/sphinxbase/
 git checkout master
 git pull
 ./autogen.sh
