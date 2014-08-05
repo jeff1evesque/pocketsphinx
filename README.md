@@ -8,21 +8,17 @@ For questions regarding this project, or implementations of it on other projects
 Jeffrey Levesque  
 jeff1evesque@yahoo.com
 
-##PocketSphinx
-
-###Definition:
+###Definition
 
 PocketSphinx is a lightweight speech recognition engine, specifically tuned for handheld and mobile devices, though it works equally well on the desktop.
 
 - https://github.com/cmusphinx/pocketsphinx
 
-###Overview:
+###Overview
 
 Though, this can be forked to any project - we are specifically going to use it as a submodule in our other project - https://github.com/jeff1evesque/audio-analyzer
 
-##Requirement
-
-###Pre-Installation:
+##Pre-Installation
 
 ```
 sudo apt-get update
@@ -32,49 +28,49 @@ sudo apt-get install bison
 sudo apt-get install swig2.0
 ```
 
-###Configuration
+##Configuration
 
-####GIT:
+###GIT
 
 Fork this project on your GitHub account, then clone it:
 
 ```
-cd /var/www
+cd /var/www/html/
 sudo git clone https://jeff1evesque@github.com/[YOUR-USERSNAME]/pocketsphinx.git pocketsphinx
 ```
 
 Then, add git upstream reference:
 
 ```
-cd /var/www/pocketsphinx
+cd /var/www/html/pocketsphinx/
 git remote add upstream https://github.com/jeff1evesque/pocketsphinx.git
 ```
 
 Initialize any submodules we are using:
 
 ```
-cd /var/www/pocketsphinx
+cd /var/www/html/pocketsphinx/
 git submodule init
 git submodule update
 ```
 
-####File Permission:
+###File Permission
 
 Change the file permission for the entire project by issuing the command:
 
 ```
-cd /var/www
+cd /var/www/html/
 sudo chown -R jeffrey:admin pocketsphinx
 ```
 
 **Note:** change *jeffrey* to YOUR username.
 
-####Local Ignore Rules
+###Local Ignore Rules
 
 We do not want to commit files, or directories within our git *submodules*.  For this reason, we need to add git *local ignore rules*.  This is done by changing into the directory of the submodule and editing the following file:
 
 ```
-cd /var/www/pocketsphinx/[YOUR_SUBMODULE]
+cd /var/www/html/pocketsphinx/[YOUR_SUBMODULE]/
 pico .git/info/exclude
 ```
 
@@ -86,22 +82,22 @@ Then, add the following, and save the file:
 
 **Note:** each repository (or submodule) has it's own `.git/info/exclude` file. 
 
-###Installation, and Updates:
+##Installation /  Updates
 
 SphinxBase is a dependency for *PocketSphinx*.  Therefore, we need to incorporate both submodules.
 
 - https://github.com/cmusphinx/pocketsphinx/blob/master/README
 
-####SphinxBase:
+###SphinxBase
 
 ```
-cd /var/www/pocketsphinx/sphinxbase
+cd /var/www/html/pocketsphinx/sphinxbase/
 git checkout master
 git pull
 ./autogen.sh
 sudo make install
 
-cd ..
+cd ../
 git add sphinxbase
 git commit -m "#i: MESSAGE"
 git push origin [NEW_BRANCH]
@@ -109,15 +105,15 @@ git push origin [NEW_BRANCH]
 
 Then, submit a pull-request, and merge the above changes.
 
-####PocketSphinx:
+###PocketSphinx
 
 Repeat the latter steps tailored for the PocketSphinx submodule.
 
-####SphinxTrain:
+###SphinxTrain
 
 Repeat the latter steps tailored for the SphinxTrain submodule.
 
-####Additional PocketSphinx Models
+###Additional PocketSphinx Models
 
 To improve the accuracy of audio translations, we will utilize two additional models.  An *Acoustic*, and *Language* model.  These can be downloaded from the following sources, respectively:
 
@@ -128,13 +124,13 @@ To improve the accuracy of audio translations, we will utilize two additional mo
 Then, we need to ensure `en-us` is stored in the following directory:
 
 ```
-/usr/local/share/pocketsphinx/model/hmm/en-us
+/usr/local/share/pocketsphinx/model/hmm/
 ```
 
 and, `cmusphinx-5.0-en-us.lm.dmp` (extracted *language model*) is stored in the following directory:
 
 ```
-/usr/local/share/pocketsphinx/model/lm/cmusphinx-5.0-en-us.lm.dmp
+/usr/local/share/pocketsphinx/model/lm/
 ```
 
 ##Testing / Execution
@@ -179,6 +175,5 @@ TR = 3xRT
 ###Translation Accuracy
 
 Depending on whether additional *Acoustic*, or *Lanuguage* models are used, the translation accuracy can be significantly influenced.  Generally, the *Acoustic model* describes the sounds of the language, whereas the *Language model* describes the probability of word sequences.  In order to create our own acoustic model, we need to utilize the *SphinxTrain* submodule in this repository.  To create our own language model, we need to use *srilm*, a non-free licensed tool.
-
 
 One thing to keep in mind, the *Sphinx* engine has difficulty translating *language fillers*, words generally used to express pauses (uh, hmm, err, ahh, etc.) within speech.  Language fillers, at times may be ignored, translated into other known words, or distorting the translation of words spoken within close (immediate) proximity of the language filler.
