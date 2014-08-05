@@ -66,9 +66,7 @@ sudo chown -R jeffrey:admin pocketsphinx
 
 ##Installation /  Updates
 
-SphinxBase is a dependency for *PocketSphinx*.  Therefore, we need to incorporate both submodules.
-
-- https://github.com/cmusphinx/pocketsphinx/blob/master/README
+Since SphinxBase is a [dependency](https://github.com/cmusphinx/pocketsphinx/blob/master/README) for PocketSphinx, both submodules are required.
 
 ###SphinxBase
 
