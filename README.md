@@ -35,21 +35,21 @@ sudo apt-get install swig2.0
 Fork this project on your GitHub account, then clone it:
 
 ```
-cd /var/www
+cd /var/www/
 sudo git clone https://jeff1evesque@github.com/[YOUR-USERSNAME]/pocketsphinx.git pocketsphinx
 ```
 
 Then, add git upstream reference:
 
 ```
-cd /var/www/pocketsphinx
+cd /var/www/pocketsphinx/
 git remote add upstream https://github.com/jeff1evesque/pocketsphinx.git
 ```
 
 Initialize any submodules we are using:
 
 ```
-cd /var/www/pocketsphinx
+cd /var/www/pocketsphinx/
 git submodule init
 git submodule update
 ```
@@ -59,7 +59,7 @@ git submodule update
 Change the file permission for the entire project by issuing the command:
 
 ```
-cd /var/www
+cd /var/www/
 sudo chown -R jeffrey:admin pocketsphinx
 ```
 
@@ -70,7 +70,7 @@ sudo chown -R jeffrey:admin pocketsphinx
 We do not want to commit files, or directories within our git *submodules*.  For this reason, we need to add git *local ignore rules*.  This is done by changing into the directory of the submodule and editing the following file:
 
 ```
-cd /var/www/pocketsphinx/[YOUR_SUBMODULE]
+cd /var/www/pocketsphinx/[YOUR_SUBMODULE]/
 pico .git/info/exclude
 ```
 
@@ -91,13 +91,13 @@ SphinxBase is a dependency for *PocketSphinx*.  Therefore, we need to incorporat
 ###SphinxBase
 
 ```
-cd /var/www/pocketsphinx/sphinxbase
+cd /var/www/pocketsphinx/sphinxbase/
 git checkout master
 git pull
 ./autogen.sh
 sudo make install
 
-cd ..
+cd ../
 git add sphinxbase
 git commit -m "#i: MESSAGE"
 git push origin [NEW_BRANCH]
@@ -124,13 +124,13 @@ To improve the accuracy of audio translations, we will utilize two additional mo
 Then, we need to ensure `en-us` is stored in the following directory:
 
 ```
-/usr/local/share/pocketsphinx/model/hmm/en-us
+/usr/local/share/pocketsphinx/model/hmm/
 ```
 
 and, `cmusphinx-5.0-en-us.lm.dmp` (extracted *language model*) is stored in the following directory:
 
 ```
-/usr/local/share/pocketsphinx/model/lm/cmusphinx-5.0-en-us.lm.dmp
+/usr/local/share/pocketsphinx/model/lm/
 ```
 
 ##Testing / Execution
@@ -175,6 +175,5 @@ TR = 3xRT
 ###Translation Accuracy
 
 Depending on whether additional *Acoustic*, or *Lanuguage* models are used, the translation accuracy can be significantly influenced.  Generally, the *Acoustic model* describes the sounds of the language, whereas the *Language model* describes the probability of word sequences.  In order to create our own acoustic model, we need to utilize the *SphinxTrain* submodule in this repository.  To create our own language model, we need to use *srilm*, a non-free licensed tool.
-
 
 One thing to keep in mind, the *Sphinx* engine has difficulty translating *language fillers*, words generally used to express pauses (uh, hmm, err, ahh, etc.) within speech.  Language fillers, at times may be ignored, translated into other known words, or distorting the translation of words spoken within close (immediate) proximity of the language filler.
