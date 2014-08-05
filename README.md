@@ -160,6 +160,8 @@ The [PocketSphinx](http://cmusphinx.sourceforge.net/wiki/tutorialpocketsphinx) t
 TR = 3 x RT
 ```
 
+The *translation time* (TR) can be verified by checking the output from the command `pocketsphinx_continuous`.  This command will output many lines.  However, the ones of particular relevance have a very specific form.
+
 ###Translation Accuracy
 
 Depending on whether additional *Acoustic*, or *Lanuguage* models are used, the translation accuracy can be significantly influenced.  Generally, the *Acoustic model* describes the sounds of the language, whereas the *Language model* describes the probability of word sequences.  In order to create our own acoustic model, we need to utilize the *SphinxTrain* submodule in this repository.  To create our own language model, we need to use *srilm*, a non-free licensed tool.
