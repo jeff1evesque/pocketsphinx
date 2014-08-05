@@ -8,8 +8,6 @@ For questions regarding this project, or implementations of it on other projects
 Jeffrey Levesque  
 jeff1evesque@yahoo.com
 
-##PocketSphinx
-
 ###Definition:
 
 PocketSphinx is a lightweight speech recognition engine, specifically tuned for handheld and mobile devices, though it works equally well on the desktop.
