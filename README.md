@@ -8,7 +8,7 @@ For questions regarding this project, or implementations of it on other projects
 Jeffrey Levesque  
 jeff1evesque@yahoo.com
 
-###Definition:
+###Definition
 
 PocketSphinx is a lightweight speech recognition engine, specifically tuned for handheld and mobile devices, though it works equally well on the desktop.
 
@@ -82,7 +82,7 @@ Then, add the following, and save the file:
 
 **Note:** each repository (or submodule) has it's own `.git/info/exclude` file. 
 
-##Installation, and Updates:
+##Installation /  Updates
 
 SphinxBase is a dependency for *PocketSphinx*.  Therefore, we need to incorporate both submodules.
 
