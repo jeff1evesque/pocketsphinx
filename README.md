@@ -20,7 +20,7 @@ Though, this can be forked to any project - we are specifically going to use it 
 
 ##Pre-Installation
 
-###Linux Packags
+###Linux Packages
 
 ```
 # General Packages:
