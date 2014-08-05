@@ -18,9 +18,7 @@ PocketSphinx is a lightweight speech recognition engine, specifically tuned for 
 
 Though, this can be forked to any project - we are specifically going to use it as a submodule in our other project - https://github.com/jeff1evesque/audio-analyzer
 
-##Requirement
-
-###Pre-Installation:
+##Pre-Installation:
 
 ```
 sudo apt-get update
@@ -30,9 +28,9 @@ sudo apt-get install bison
 sudo apt-get install swig2.0
 ```
 
-###Configuration
+##Configuration
 
-####GIT:
+###GIT:
 
 Fork this project on your GitHub account, then clone it:
 
@@ -56,7 +54,7 @@ git submodule init
 git submodule update
 ```
 
-####File Permission:
+###File Permission:
 
 Change the file permission for the entire project by issuing the command:
 
@@ -67,7 +65,7 @@ sudo chown -R jeffrey:admin pocketsphinx
 
 **Note:** change *jeffrey* to YOUR username.
 
-####Local Ignore Rules
+###Local Ignore Rules
 
 We do not want to commit files, or directories within our git *submodules*.  For this reason, we need to add git *local ignore rules*.  This is done by changing into the directory of the submodule and editing the following file:
 
@@ -84,13 +82,13 @@ Then, add the following, and save the file:
 
 **Note:** each repository (or submodule) has it's own `.git/info/exclude` file. 
 
-###Installation, and Updates:
+##Installation, and Updates:
 
 SphinxBase is a dependency for *PocketSphinx*.  Therefore, we need to incorporate both submodules.
 
 - https://github.com/cmusphinx/pocketsphinx/blob/master/README
 
-####SphinxBase:
+###SphinxBase:
 
 ```
 cd /var/www/pocketsphinx/sphinxbase
@@ -107,15 +105,15 @@ git push origin [NEW_BRANCH]
 
 Then, submit a pull-request, and merge the above changes.
 
-####PocketSphinx:
+###PocketSphinx:
 
 Repeat the latter steps tailored for the PocketSphinx submodule.
 
-####SphinxTrain:
+###SphinxTrain:
 
 Repeat the latter steps tailored for the SphinxTrain submodule.
 
-####Additional PocketSphinx Models
+###Additional PocketSphinx Models
 
 To improve the accuracy of audio translations, we will utilize two additional models.  An *Acoustic*, and *Language* model.  These can be downloaded from the following sources, respectively:
 
