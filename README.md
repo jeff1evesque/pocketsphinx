@@ -14,11 +14,11 @@ PocketSphinx is a lightweight speech recognition engine, specifically tuned for 
 
 - https://github.com/cmusphinx/pocketsphinx
 
-###Overview:
+###Overview
 
 Though, this can be forked to any project - we are specifically going to use it as a submodule in our other project - https://github.com/jeff1evesque/audio-analyzer
 
-##Pre-Installation:
+##Pre-Installation
 
 ```
 sudo apt-get update
@@ -30,7 +30,7 @@ sudo apt-get install swig2.0
 
 ##Configuration
 
-###GIT:
+###GIT
 
 Fork this project on your GitHub account, then clone it:
 
@@ -54,7 +54,7 @@ git submodule init
 git submodule update
 ```
 
-###File Permission:
+###File Permission
 
 Change the file permission for the entire project by issuing the command:
 
@@ -88,7 +88,7 @@ SphinxBase is a dependency for *PocketSphinx*.  Therefore, we need to incorporat
 
 - https://github.com/cmusphinx/pocketsphinx/blob/master/README
 
-###SphinxBase:
+###SphinxBase
 
 ```
 cd /var/www/pocketsphinx/sphinxbase
@@ -105,11 +105,11 @@ git push origin [NEW_BRANCH]
 
 Then, submit a pull-request, and merge the above changes.
 
-###PocketSphinx:
+###PocketSphinx
 
 Repeat the latter steps tailored for the PocketSphinx submodule.
 
-###SphinxTrain:
+###SphinxTrain
 
 Repeat the latter steps tailored for the SphinxTrain submodule.
 
